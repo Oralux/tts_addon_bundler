@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.%TTS%" name="%NAME%" version="%ADDON_VERSION%" provider-name="tts_addon_bundler">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>linux</platform>
+    <summary lang="en">%NAME%</summary>
+    <description lang="en">%DESCRIPTION% (%ARCH%).
+    Built by tts_addon_bundler: https://github.com/Oralux/tts_addon_bundler
+    </description>
+    <license>%LICENSE%</license>    
+    <news>v%ADDON_VERSION% (%DATE%)
+    %NEWS%
+    </news>
+    <assets>
+    <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>

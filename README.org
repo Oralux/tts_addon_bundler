@@ -1,0 +1,21 @@
+*Usage: tts_addon_bundler.sh [options]*
+
+This script builds text-to-speech addons for LibreELEC 10.0 (x86_64 or ARM).
+
+Text-to-speech supported:
+- eSpeak NG (the binaries will be downloaded from Debian repositories)
+
+*EXAMPLES*
+
+- build the eSpeak NG addon for x86_64 (default)
+  ./tts_addon_bundler.sh
+
+- for Raspberry PI
+  ./tts_addon_bundler.sh --arch=armv7l
+
+*OPTIONS*
+     -a, --arch       set the target architecture (x86_64, armv7l or aarch64)
+     -b, --build      build addon (default option)
+     -c, --clean      clean the build and download directories
+     -h, --help       display this help
+     -s, --source     download source packages
