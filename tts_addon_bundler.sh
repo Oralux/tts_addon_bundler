@@ -32,7 +32,7 @@ EXAMPLES
 OPTIONS
      -a, --arch       set the target architecture (x86_64, armv7l or aarch64)
      -b, --build      build addon (default option)
-     -c, --clean      clean the build and download directories
+     -c, --clean      clean the build directory
      -h, --help       display this help
      -s, --source     download source packages
 "
@@ -69,7 +69,7 @@ case "$ARCH" in
 esac
 
 if [ -n "$CLEAN" ]; then
-    rm -rf build download
+    rm -rf build
     [ "$BUILD" = 0 ] && exit 0
 fi
 
@@ -119,7 +119,6 @@ $tts_build_addon "$BASE"/"$TTS"/SHA512SUM
 cd "$BUILD_DIR"
 ZIPNAME="$TARGET"_"$ADDON_VERSION"_"$ARCH"
 ZIPFILE="$ZIPNAME".zip
-#ZIPFILE="$BUILD_DIR"/"$ZIPNAME".zip
 zip -qr "$ZIPFILE" "$TARGET"
 sha512sum "$ZIPFILE" > "$ZIPNAME".sha512
 echo "Addon available: $BUILD_DIR/$ZIPFILE"

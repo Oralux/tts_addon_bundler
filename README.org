@@ -1,6 +1,8 @@
 *Usage: tts_addon_bundler.sh [options]*
 
 This script builds text-to-speech addons for LibreELEC 10.0 (x86_64 or ARM).
+The resulting zip files are available at:
+https://oralux.org/soft/LibreELEC/10/ 
 
 Text-to-speech supported:
 - eSpeak NG (the binaries will be downloaded from Debian repositories)
